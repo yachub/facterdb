@@ -31,7 +31,7 @@ elif test -f /usr/bin/apt-get; then
 elif test -f /etc/redhat-release ; then
   operatingsystemmajrelease=$(rpm -qf /etc/redhat-release --queryformat '%{version}' | cut -f1 -d'.')
   case $(rpm -qf /etc/redhat-release --queryformat '%{name}') in
-  centos*|redhat*)
+  centos*|redhat*|rocky*)
     osfamily='RedHat'
     ;;
   fedora*)
